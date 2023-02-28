@@ -1,4 +1,5 @@
 import { Toaster } from 'react-hot-toast';
+import { useSelector } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Main from './Layout/Main';
@@ -8,6 +9,9 @@ import PublishBlog from './Pages/PublishBlog/PublishBlog';
 import SignUp from './Pages/SignUp/SignUp';
 
 function App() {
+
+  const state = useSelector(state => state)
+  console.log(state);
 
   const router = createBrowserRouter([
     {
